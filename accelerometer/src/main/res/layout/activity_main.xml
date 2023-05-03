@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/azimuthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/azimuthLabel"
+        app:layout_constraintStart_toEndOf="@+id/azimuthLabel"
+        app:layout_constraintTop_toTopOf="@+id/azimuthLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pitchValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/pitchLabel"
+        app:layout_constraintEnd_toEndOf="@+id/azimuthValue"
+        app:layout_constraintStart_toStartOf="@+id/azimuthValue"
+        app:layout_constraintTop_toTopOf="@+id/pitchLabel" />
+
+    <TextView
+        android:id="@+id/rollValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/rollLabel"
+        app:layout_constraintEnd_toEndOf="@+id/pitchValue"
+        app:layout_constraintStart_toStartOf="@+id/pitchValue"
+        app:layout_constraintTop_toTopOf="@+id/rollLabel" />
+
+    <TextView
+        android:id="@+id/azimuthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Azimuth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405" />
+
+    <TextView
+        android:id="@+id/pitchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Pitch"
+        app:layout_constraintEnd_toEndOf="@+id/azimuthLabel"
+        app:layout_constraintStart_toStartOf="@+id/azimuthLabel"
+        app:layout_constraintTop_toBottomOf="@+id/azimuthLabel" />
+
+    <TextView
+        android:id="@+id/rollLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Roll"
+        app:layout_constraintEnd_toEndOf="@+id/pitchLabel"
+        app:layout_constraintStart_toStartOf="@+id/pitchLabel"
+        app:layout_constraintTop_toBottomOf="@+id/pitchLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
